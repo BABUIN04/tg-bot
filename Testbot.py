@@ -2,11 +2,11 @@ from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message
 from aiogram.filters import Command
 import aiosqlite
-from aiohttp.web_fileresponse import content_type
+
 
 import keyboards as kb
 from aiogram.types import CallbackQuery
-from datetime import datetime
+
 
 bot = Bot('7679576329:AAFE1jUR8SvSY8i2IjUmOcUamVg7PdWzEOI')
 dispatcher = Dispatcher()
