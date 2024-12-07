@@ -120,7 +120,7 @@ async def save_phot(cb: Message):
     subject = 'хим'
     print(cb.photo)
     file_id = cb.photo[-1].file_id
-    await cb.bot.download(file=file_id, destination='images/' + file_id + '.jpeg')
+    await cb.bot.download(file=file_id, destination='data/' + file_id + '.jpeg')
     async with aiosqlite.connect('БД.db') as db:
         await db.execute('INSERT INTO images (image_id, subject) VALUES (?, ?)', (file_id, SUBJECT,))
         await db.commit()
